@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  1
+        // let set = new Set();
+        // set.add(1)
+        // set.add("1")
+        // console.log(set.size)
+
+        // 2
+        // let set = new Set([1,2,4,5,4,3,2,1])
+        // console.log(set.size)
+
+        //3
+        // let set = new Set()
+        // set.add("1")
+        // set.add(1)
+        // console.log(set.has(1))
+        // console.log(set.has("6"))
+
+        // 4 
+        // let set = new Set()
+        // set.add("1")
+        // set.add(1)
+        // console.log(set.has(1))
+        // set.delete(1)
+        // console.log(set.size)
+        // set.clear()
+        // console.log(set.size)
+
+        //5 
+        // let set = new Set(['red', 'green', 'blue'])
+        // for (let item of set.keys()){
+        //     console.log(item)
+        // }
+
+        // for (let item1 of set.values()){
+        //     console.log(item1)
+        // }
+
+        // for (let item2 of set.entries()){
+        //     console.log(item2)
+        // }
+
+        // 6
+        // let set = new Set([1,2])
+        // set.forEach(function(value,key){
+        //     console.log(key + ":" + value)
+        // })
+
+        // 7 
+        let arr = [1,2,3,3,4]
+        let set = new Set(arr)
+        let newArr = Array.from(set)
+        console.log(newArr)
+    </script>
+</body>
+</html>
