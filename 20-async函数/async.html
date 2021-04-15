@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function takeLongTime() {
+            return new Promise(resolve => {
+                setTimeout(() => resolve("long_time_value"), 1000);
+            });
+        }
+        takeLongTime().then(v => {
+            console.log("got", v)
+        })
+
+        function takeLongTime(){
+            return new Promise(function(resolve){
+                setTimeout(function(){
+                    resolve("long_time_value")
+                },1000)
+            })
+        }
+
+        takeLongTime().then(function(v){
+            console.log("get", v)
+        })
+    </script>
+</body>
+
+</html>
