@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let hero = {
+        //     name: "赵云",
+        //     age: 25
+        // }
+        // let handler = {}
+        // let heroProxy = new Proxy(hero, handler)
+        // console.log(heroProxy.name)
+        // heroProxy.name = "黄忠"
+        // console.log(heroProxy.name)
+
+        // 实例2
+        let hero = {
+            name: "赵云",
+            age: 25
+        }
+
+        let handler = {
+            get: (hero, name,) => {
+                const heroName = `英雄名是${hero.name}`;
+                return heroName;
+            },
+            set: (hero, name, value) => {
+                console.log(`${hero.name} change to ${value}`);
+                hero[name] = value;
+                return true;
+            }
+        }
+
+        let heroProxy = new Proxy(hero, handler);
+
+        console.log(heroProxy.name);
+        heroProxy.name = '黄忠';
+        console.log(heroProxy.name);
+    </script>
+</body>
+
+</html>
